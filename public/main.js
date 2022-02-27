@@ -16,7 +16,7 @@ const iceServers = {
 }
 
 const streamConstraints = {
-    audio: false,
+    audio: true,
     video: true,
 }
 
@@ -35,13 +35,13 @@ btnGoRoom.onclick = () => {
         //         console.log('An error occured while getting user media. the error is: ', err )
         //     })
         roomNumber = inputRoomNumber.value
-        socket.emit('create or join message ', roomNumber)
-        divSelectRoom.style = 'display: none'
-        divConsultingRoom.style = 'display: block'
+        socket.emit('create or join', roomNumber)
+        divSelectRoom.style = "display: none"
+        divConsultingRoom.style = "display: block"
     }
 }
 
-socket.on('created ', room => {
+socket.on('created', room => {
     navigator.mediaDevices.getUserMedia(streamConstraints)
         .then(stream => {
             localStream = stream
@@ -49,7 +49,7 @@ socket.on('created ', room => {
             isCaller = true
         })
         .catch(err => {
-            console.log('An error occured while getting user media. the error is: ', err )
+            console.log('An error occured while getting user media.')
         })
 
 })

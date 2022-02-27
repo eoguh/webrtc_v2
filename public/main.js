@@ -43,14 +43,14 @@ btnGoRoom.onclick = () => {
 
 socket.on('created', room => {
     navigator.mediaDevices.getUserMedia(streamConstraints)
-        .then(stream => {
-            localStream = stream
-            localVideo.srcObject = stream
-            isCaller = true
-        })
-        .catch(err => {
-            console.log('An error occured while getting user media.')
-        })
+            .then(stream => {
+                localStream = stream
+                localVideo.srcObject = stream
+                isCaller = true
+            })
+            .catch(err => {
+                console.log('An error occured while getting user media.')
+            })
 
 })
 

@@ -1,6 +1,6 @@
 "# webrtc_version_2"
 
-ABOUT THE SOFTWARE: It's simply demo of a zoom like meeting app. using WebRTC and Node.js
+ABOUT THE SOFTWARE: It's simply a demo of an online video meeting web app, using WebRTC and Node.js
 
 <<<<<<< HEAD
 ABOUT THE TECHNOLOGY USED: WebRTC is currently the only technolology available for developers to implement peer to peer connection and communication. With this technology you can implement: file transfer, media tranfer including life streams. It can be used in many tech areas including mobile, web, embedded systems -arduino and raspberry pie- and more.
